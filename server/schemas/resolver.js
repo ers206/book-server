@@ -1,5 +1,5 @@
 // from mod see challenge docs 
-
+// thought not needed 
 const { User, Thought } = require('../models');
 const { AuthenticationError } = require('apollo-server-express');
 const { signToken } = require('../utils/auth');
