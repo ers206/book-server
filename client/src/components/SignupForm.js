@@ -4,6 +4,7 @@ import { Form, Button, Alert } from 'react-bootstrap';
 import { createUser } from '../utils/API';
 import Auth from '../utils/auth';
 
+
 const SignupForm = () => {
   // set initial form state
   const [userFormData, setUserFormData] = useState({ username: '', email: '', password: '' });
@@ -26,7 +27,7 @@ const SignupForm = () => {
       event.preventDefault();
       event.stopPropagation();
     }
-
+    // SignupForm.js: Replace the addUser() functionality imported from the API file with the ADD_USER mutation functionality. where the hell is addUser()  
     try {
       const response = await createUser(userFormData);
 
