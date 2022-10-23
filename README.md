@@ -1,4 +1,4 @@
-# book-server
+# Book-server
 
 ## Purpose
 To refactor a Google Books Api search engine built with a restful Api to be a GraphQl API with the Apollo server.
@@ -8,7 +8,7 @@ I set up an Apollo Server to replace the existing Restful API. I also modified t
 
 ## Built with
 * Apollo
-* MERN stack
+* Express
 * MongoDB
 * Node
 
