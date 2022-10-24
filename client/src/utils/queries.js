@@ -1,22 +1,32 @@
 import { gql } from '@apollo/client';
 
 // challenge docs say that MediaQueryListEvent.js will hold get_me query
+// export const GET_ME = gql`
+//   query me($username: String) {
+//     thoughts(username: $username) {
+//       _id
+//       thoughtText
+//       createdAt
+//       username
+//       reactionCount
+//       reactions {
+//         _id
+//         createdAt
+//         username
+//         reactionBody
+//       }
+//     }
+//   }
+// `;
+
 export const GET_ME = gql`
-  query me($username: String) {
-    thoughts(username: $username) {
-      _id
-      thoughtText
-      createdAt
-      username
-      reactionCount
-      reactions {
-        _id
-        createdAt
-        username
-        reactionBody
-      }
-    }
-  }
+{
+me{
+__id 
+username
+email
+}
+}
 `;
 
 // export const QUERY_THOUGHT = gql`

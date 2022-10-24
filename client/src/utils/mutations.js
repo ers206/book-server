@@ -24,59 +24,42 @@ export const ADD_USER = gql`
   }
 `;
 
+
+// dont think this is right 
 export const SAVE_BOOK = gql`
-  mutation saveBook($thoughtText: String!) {
-    saveBook(thoughtText: $thoughtText) {
-      _id
-      thoughtText
-      createdAt
-      username
-      reactionCount
-      reactions {
-        _id
+  mutation saveBook() {
+    {
+        savedBooks{
+        id
+        authors
+        description
+        title
+        image
+        link
       }
+      _id
+      username
+      email
+      bookCount
     }
   }
 `;
 
 export const REMOVE_BOOK = gql`
-  mutation removeBook($thoughtId: ID!, $reactionBody: String!) {
-    addReaction(thoughtId: $thoughtId, reactionBody: $reactionBody) {
+  mutation removeBook($bookId: ID!) {
+    removeBook(bookId:$bookId){
       _id
-      reactionCount
-      reactions {
-        _id
-        reactionBody
-        createdAt
-        username
+      username
+      bookCount
+      savedBooks{
+        _bookId
+        authors
+        description
+        title
+        image
+        link
       }
     }
   }
 `;
 
-// export const ADD_FRIEND = gql`
-//   mutation addFriend($id: ID!) {
-//     addFriend(friendId: $id) {
-//       _id
-//       username
-//       friendCount
-//       friends {
-//         _id
-//         username
-//       }
-//     }
-//   }
-// `;
-
-// export const REMOVE_FRIEND = gql`
-//   mutation removeFriend($id: ID!) {
-//     removeFriend(id: $id) {
-//       _id
-//       username
-//       friends {
-//         _id
-//         username
-//       }
-//     }
-//   }
-// `;
