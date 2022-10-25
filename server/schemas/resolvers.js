@@ -67,7 +67,7 @@ const resolvers = {
             const token = signToken(user);
             return { token, user };
           },
-           deleteBook: async(parent, arg, context) => {
+           removeBook: async(parent, arg, context) => {
             if(context.user) {
               const updatedUser = await User.findOneAndUpdate(
                 { _id: context.user._id },
