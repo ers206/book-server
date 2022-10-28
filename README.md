@@ -20,6 +20,7 @@ I set up an Apollo Server to replace the existing Restful API. I also modified t
 Made with ❤️ by Eric Schweitzer
 
 &copy; Schweitzer Enterprises
+<!-- errors in savedbook searchbook loginform commented out and it doesnt work blank screen  -->
 
 <!-- challenge 21/ deep-thoughts is the class activity  -->
 
